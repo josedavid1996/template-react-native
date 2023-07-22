@@ -8,7 +8,12 @@ const SwitchDarkMode = () => {
   const { colorScheme, toggleColorScheme } = useColorScheme()
   return (
     <View>
-      <Switch />
+      <Switch
+        trackColor={{ false: '#7dd3fc', true: '#7dd3fc' }}
+        thumbColor={colorScheme === 'dark' ? '#0c4a6e' : '#bae6fd'}
+        value={colorScheme === 'dark'}
+        onChange={toggleColorScheme}
+      />
     </View>
   )
 }

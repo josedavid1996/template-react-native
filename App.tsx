@@ -17,7 +17,6 @@ export default function App() {
   useAuth()
 
   const [loaded] = useFonts({
-    lumanosimo: require('./assets/fonts/Lumanosimo-Regular.ttf'),
     poppinsThin: require('./assets/fonts/Poppins-Thin.ttf'),
     poppins: require('./assets/fonts/Poppins-Regular.ttf'),
     poppinsMedium: require('./assets/fonts/Poppins-Medium.ttf'),

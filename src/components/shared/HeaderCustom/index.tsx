@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 import SwitchDarkMode from '../SwitchDarkMode/index'
 
-import { useFonts } from 'expo-font'
+import TextCustom from '../Text'
 
 interface Props {
   title: string
@@ -13,19 +13,15 @@ interface Props {
 
 const HeaderCustom = ({ title }: Props) => {
   return (
-    <View className="flex flex-row justify-between px-2 py-1 items-center ">
+    <View className="flex flex-row justify-between px-2 items-center bg-white dark:bg-black">
       {/* ICON */}
-      <View>
-        <Ionicons name="chevron-back-outline" size={30} color="#677483" />
-      </View>
+      <Ionicons name="chevron-back-outline" size={27} color="#677483" />
 
       {/* TITLE */}
-      <Text
-        // style={{ fontFamily: 'Lumanosimo-Regular' }}
-        className="font-poppins   text-lg text-gray-700"
-      >
+      <TextCustom font="poppins-semibold" size="xl" color="primary">
         {title}
-      </Text>
+      </TextCustom>
+
       {/* SWITCH */}
       <SwitchDarkMode />
     </View>
