@@ -20,7 +20,7 @@ const SignInScreen = () => {
   }
   return (
     <View>
-      <Text>SignInScreen</Text>
+      <Text className="text-red-500 p-10">SignInScreen</Text>
       <TouchableOpacity onPress={handleLogin}>
         <Text>LOGIN</Text>
       </TouchableOpacity>

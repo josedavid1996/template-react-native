@@ -8,7 +8,6 @@ const HomeScreen = () => {
   const { data } = useCompanyQuery({
     fetchPolicy: 'network-only'
   })
-  console.log(data)
 
   // FUNCICON PARA DESLOGUEARSE
   const handleLogout = () => {
