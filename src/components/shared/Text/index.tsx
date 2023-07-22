@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import { Text, TextProps } from 'react-native'
 import { useColorScheme } from 'nativewind'
 
-type Color = 'primary' | 'black' | 'white'
+type Color = 'primary' | 'black' | 'white' | 'textButton'
 type Size = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 type Font =
   | 'poppins'
@@ -15,7 +15,6 @@ interface Props extends TextProps {
   color?: Color
   size?: Size
   font?: Font
-  children: ReactNode
 }
 
 const TextCustom: React.FC<Props> = ({
@@ -39,7 +38,8 @@ const TextCustom: React.FC<Props> = ({
   const colors: Record<Color, string> = {
     white: useColorScheme().colorScheme === 'dark' ? 'white' : 'black',
     black: useColorScheme().colorScheme !== 'dark' ? 'black' : 'white',
-    primary: '#0ea5e9'
+    primary: '#0ea5e9',
+    textButton: 'white'
   }
 
   const fonts: Record<Font, string> = {
@@ -57,7 +57,7 @@ const TextCustom: React.FC<Props> = ({
         color: colors[color],
         fontFamily: fonts[font]
       }}
-    ></Text>
+    />
   )
 }
 

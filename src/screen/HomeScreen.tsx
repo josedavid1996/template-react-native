@@ -7,6 +7,8 @@ import { useAuthStore } from '../store/auth'
 
 import HeaderCustom from '../components/shared/HeaderCustom'
 import LayoutCustom from '../components/layout/LayoutCustom'
+import Button from '../components/shared/Button'
+import TextCustom from '../components/shared/Text'
 
 const HomeScreen = () => {
   const updateDataAuth = useAuthStore((state) => state.updateDataAuth)
@@ -32,9 +34,13 @@ const HomeScreen = () => {
         <View>
           <HeaderCustom title="Home" />
           <Text>HomeScreen</Text>
-          <TouchableOpacity onPress={handleLogout}>
-            <Text>LOGOUT</Text>
-          </TouchableOpacity>
+          <View style={{ alignItems: 'center' }}>
+            <Button onPress={handleLogout}>
+              <TextCustom color="textButton" font="poppins-bold">
+                LOGOUT
+              </TextCustom>
+            </Button>
+          </View>
         </View>
       </LayoutCustom>
     </>
