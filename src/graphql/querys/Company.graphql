@@ -1,0 +1,19 @@
+query Company {
+  company {
+    ceo
+    coo
+    cto
+    cto_propulsion
+    employees
+    founded
+    founder
+ 
+    launch_sites
+ 
+    name
+    summary
+    test_sites
+    valuation
+    vehicles
+  }
+}
