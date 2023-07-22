@@ -27,7 +27,14 @@ const Navigation = () => {
 
   return (
     <>
-      <NavigationStack.Navigator>
+      <NavigationStack.Navigator
+        screenOptions={{
+          headerShown: false,
+          cardStyle: {
+            backgroundColor: 'white'
+          }
+        }}
+      >
         {dataAuth.isSignout ? (
           <>
             <NavigationStack.Screen name="HomeScreen" component={HomeScreen} />
